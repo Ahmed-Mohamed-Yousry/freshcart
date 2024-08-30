@@ -6,6 +6,6 @@ export default function Allorders() {
     useEffect(()=>{
     },[])
   return <>
-  <h3>template componate</h3>
+  <h3>all oroders componate</h3>
   </>
 }
