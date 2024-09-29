@@ -50,7 +50,7 @@ export default function Brand() {
 
         <div className='row'>
           {filteredBrands.length > 0 ? filteredBrands.map((brand) => (
-            <div key={brand.id} className='md:w-3/12 w-11/12 mt-16 px-2'>
+            <div key={brand.id} className='md:w-3/12 w-11/12 mt-16 px-2  mx-auto'>
               <div className='shadow-md p-1 bg-gray-600 rounded-md hover:shadow-2xl hover:shadow-gray-500'>
                 <img src={brand.image} className='imgBrand rounded-t-md' alt={brand.name} />
                 <div className="p-3">
