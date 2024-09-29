@@ -47,7 +47,7 @@ export default function Cart() {
             </Helmet>
 </div>
 
-
+<div className="mx-auto overflow-hidden">
     <div className='mt-40 row flex-row justify-center align-middle'> 
     <h2 className='text-center font-bold text-white  text-2xl'>shop now</h2>
     
@@ -168,7 +168,7 @@ export default function Cart() {
   )}
 </div>
 
-
+</div>
     </>
   );
 }
