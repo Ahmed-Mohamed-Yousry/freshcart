@@ -23,6 +23,7 @@
 body{
     background-color: #1abc9c;
     overflow-x: hidden;
+
 }
 .starEditorBefore::before{
     content: "";
