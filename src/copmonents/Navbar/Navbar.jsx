@@ -132,7 +132,7 @@ function logout(){
                                 className="block py-2 px-3 text-green-600 rounded md:hover:bg-blue md:border-0 md:p-2 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-blue-500"
                                 to="contact"
                             >
-                                Contact
+                               sign up
                             </NavLink>
                         </li>
                         <li>
