@@ -65,8 +65,8 @@ export default function Wishlist() {
         
         </div>
        
-       
-        <div className="relative overflow-x-auto mt-10 mb-20 pb-10 px-4 md:px-6 lg:px-8">
+       <div className="mx-auto overflow-hidden">
+       <div className="relative overflow-x-auto mt-10 mb-20 pb-10 px-4 md:px-6 lg:px-8">
   <table className="w-full bg-gray-600 text-sm text-left text-gray-100">
     <thead className="text-xs text-gray-400 uppercase bg-gray-800">
       <tr>
@@ -114,6 +114,9 @@ export default function Wishlist() {
   </table>
 </div>
 
+
+       </div>
+        
     
         </>
   );
