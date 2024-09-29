@@ -58,7 +58,7 @@ function logout(){
                     id="navbar-default"
                 >
                     <div className='flex md:flex-row md:space-x-80 rtl:space-x-reverse'>
-                    <ul className="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-transparent text-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+                    <ul className="font-medium flex flex-col p-4 md:p-0 mt-4   rounded-lg  md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-transparent text-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
                        {userLogin!= null ? <> <li>
                             <NavLink
                                 className=""
@@ -126,7 +126,7 @@ function logout(){
                     </ul>
                     
                     
-                    <ul className="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-transparent text-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+                    <ul className="font-medium flex flex-col p-4 md:p-0 mt-4   rounded-lg  md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-transparent ">
                        {userLogin===null ? <><li>
                             <NavLink
                                 className="block py-2 px-3 text-green-600 rounded md:hover:bg-blue md:border-0 md:p-2 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-blue-500"
