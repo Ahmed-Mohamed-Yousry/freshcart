@@ -103,7 +103,7 @@ export default function Wishlist() {
             </button>
             <button
               onClick={() => { addproductToCart(product.id); }}
-              className="font-medium text-white bg-green-500 hover:text-white rounded-md dark:text-green-500 hover:bg-green-500 p-2 md:p-3"
+              className="font-medium text-white bg-green-500  rounded-md  p-2 md:p-3"
             >
               Add to Cart
             </button>
