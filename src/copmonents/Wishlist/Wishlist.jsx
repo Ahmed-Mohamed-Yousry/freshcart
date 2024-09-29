@@ -59,13 +59,13 @@ export default function Wishlist() {
                 </Helmet>
     </div>
     
-    
+    <div className="mx-auto overflow-hidden">
         <div className='mt-40 row flex-row justify-center align-middle'> 
         <h2 className='text-center font-bold text-white  text-2xl'>wish list</h2>
         
         </div>
        
-       <div className="mx-auto overflow-hidden">
+      
        <div className="relative overflow-x-auto mt-10 mb-20 pb-10 px-4 md:px-6 lg:px-8">
   <table className="w-full bg-gray-600 text-sm text-left text-gray-100">
     <thead className="text-xs text-gray-400 uppercase bg-gray-800">
