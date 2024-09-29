@@ -59,7 +59,7 @@ let formik =useFormik({
   return <>
  <div className='Contact mt-7'>
  <div className='row flex-col text-black  '>
-    <h2 className='text-center pb-4 pt-20 text-4xl font-semibold  dark:text-black'>CONATAC</h2>
+    <h2 className='text-center pb-4 pt-20 text-4xl font-semibold  dark:text-black'>sign up</h2>
     <div className='starEditor text-center py-4 relative'>
 <div className='starEditorBeforeProtfoli'></div>
 <i className="fa-solid fa-star "></i>
