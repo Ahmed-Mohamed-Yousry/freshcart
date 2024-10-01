@@ -116,7 +116,7 @@ export default function Cart() {
                   <td className=" md:px-4 py-2">
                     <button 
                       onClick={() => removeCartProduct(product.product.id)} 
-                      className="font-medium text-gray-400 hover:text-white rounded-md hover:bg-red-500 p-2"
+                      className="font-medium text-gray-400 hover:text-white rounded-md hover:bg-red-500 p-1"
                     >
                       Remove
                     </button>
