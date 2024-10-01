@@ -71,7 +71,7 @@ let formik =useFormik({
   </div>
   </div>  
 
-  <form onSubmit={formik.handleSubmit} className="max-w-md mx-auto py-10" >
+  <form onSubmit={formik.handleSubmit} className="max-w-md mx-auto py-10  px-10" >
 
 
   <div className="relative z-0 w-full mb-5 group">
