@@ -13,17 +13,17 @@ export default function Home() {
 
 <div className='mx-auto overflow-hidden'>  
 
-<div className='flex flex-col HomeStyle pt-32 pb-10 mt-7'>
+<div className='flex flex-col HomeStyle pt-32 pb-10 my-7 mx-10'>
   <img className='rounded-full w-82 h-60 mx-auto' src={HomePhoto} alt="" />
   <div className='my-5 text-white '>
-  <h3 className='text-center text-5xl font-bold  dark:text-white py-5'>start Framework</h3>
+  <h3 className='text-center text-5xl font-bold  dark:text-white py-5'>FRESHCART</h3>
   <div className='starEditor text-center py-4 relative'>
 <div className='starEditorBefore'></div>
 <i class="fa-solid fa-star "></i>
 <div className='starEditorAfter'></div>
 
   </div>
-  <p className='text-center'>Graphic Artist - Web Designer - Illustrator</p>
+  <p className='text-center'>Electronics - Mobiles - Beauty & Health - Books - Baby & Toys - Home - SuperMarket - Women's Fashion - Men's Fashion - Music</p>
   </div>
 
   </div>
