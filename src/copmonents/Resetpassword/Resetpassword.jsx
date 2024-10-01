@@ -62,8 +62,8 @@ export default function ResetPassword() {
                 </div>
             </div>
 
-            <form onSubmit={formik.handleSubmit} className="max-w-md mx-auto py-10">
-                <div className="relative z-0 w-full mb-5 group">
+            <form onSubmit={formik.handleSubmit} className="max-w-md mx-auto py-10 ">
+                <div className="relative z-0 mb-5 group">
                     <input
                         onChange={formik.handleChange}
                         value={formik.values.email}
@@ -71,7 +71,7 @@ export default function ResetPassword() {
                         type="email"
                         name="email"
                         id="email"
-                        className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-green-600 appearance-none focus:outline-none focus:ring-0 focus:border-green-600 peer"
+                        className="block py-2.5 mx-10 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-green-600 appearance-none focus:outline-none focus:ring-0 focus:border-green-600 peer"
                         placeholder=" "
                         required
                     />
