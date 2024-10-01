@@ -14,7 +14,7 @@ export default function Producte() {
   const [loading, setLoading] = useState(false);
   const [productId, setProductId] = useState(null);
   const [searchQuery, setSearchQuery] = useState('');
-  const [isTwoColumnLayout, setIsTwoColumnLayout] = useState(true); // State for layout
+  const [isTwoColumnLayout, setIsTwoColumnLayout] = useState(false); // State for layout
 
   async function getdata() {
     let { data } = await axios.get("https://ecommerce.routemisr.com/api/v1/products");
