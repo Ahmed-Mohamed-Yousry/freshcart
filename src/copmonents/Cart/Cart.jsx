@@ -56,7 +56,7 @@ export default function Cart() {
           <h2 className='text-center font-bold text-white text-2xl'>Shop Now</h2>
         </div>
 
-        <div className="relative mx-auto overflow-x-auto mt-10 mb-20 pb-10 px-4 md:px-10">
+        <div className="relative mx-auto overflow-x-hidden mt-10 mb-20 pb-10 px-4 md:px-10">
           <table className="w-full bg-gray-600 text-sm text-left text-gray-100">
             <thead className="text-xs uppercase bg-gray-800 text-gray-400">
               <tr>
