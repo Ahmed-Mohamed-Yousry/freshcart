@@ -142,8 +142,8 @@ export default function Producte() {
                   </div>
                 </div>
               </Link>
-
-              <button
+<div className='mb-4  '>
+<button
                 onClick={() => toggleWishlist(productrecen.id)}
                 className="focus:outline-none mb-16 ps-6"
               >
@@ -153,6 +153,8 @@ export default function Producte() {
                   <i className="fa fa-heart text-gray-400 text-xl" />
                 )}
               </button>
+</div>
+              
 
               <div className='partentbtn items-center align-middle px-6'>
                 <button 
