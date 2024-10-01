@@ -29,7 +29,7 @@ export default function Navbar() {
             <nav className="backgroundNav border-gray-200 dark:bg-gray-900 fixed left-0 right-0 top-0 z-50">
                 <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto py-6 md:px-0 px-10">
                     <a className="flex items-center space-x-3 rtl:space-x-reverse">
-                        <span className="self-center text-xl font-semibold whitespace-nowrap dark:text-white">
+                        <span className="self-center text-xl font-semibold whitespace-nowrap brandName">
                             FRESHCART
                         </span>
                     </a>

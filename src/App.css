@@ -25,6 +25,9 @@ body{
 
 
 }
+.brandName{
+  color: #1abc9c;
+}
 .starEditorBefore::before{
     content: "";
     position: absolute;
