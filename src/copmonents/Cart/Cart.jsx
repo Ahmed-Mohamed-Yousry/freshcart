@@ -113,10 +113,10 @@ export default function Cart() {
                   <td className="px-2 md:px-4 py-2 font-semibold text-red-500">
                     {product.price} EGP
                   </td>
-                  <td className="px-2 md:px-4 py-2">
+                  <td className=" md:px-4 py-2">
                     <button 
                       onClick={() => removeCartProduct(product.product.id)} 
-                      className="font-medium text-gray-400 hover:text-white rounded-md hover:bg-red-500 p-2"
+                      className="font-medium text-gray-400 hover:text-white rounded-md hover:bg-red-500 "
                     >
                       Remove
                     </button>
