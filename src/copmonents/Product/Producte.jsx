@@ -122,9 +122,9 @@ export default function Producte() {
         </div>
 
         {/* Product Grid */}
-        <div className={`grid gap-4 ${isTwoColumnLayout ? 'grid-cols-2' : 'grid-cols-1'} md:grid-cols-4`}>
+        <div className={`grid gap-4 ${isTwoColumnLayout ? 'grid-cols-2 px-6 ' : 'grid-cols-1 px-8 '} md:grid-cols-4`}>
           {filteredProducts.length > 0 ? filteredProducts.map((productrecen) => (
-            <div key={productrecen.id} className='shadow-md p-1 prodseen rounded-md bg-gray-600 hover:shadow-2xl hover:shadow-gray-500'>
+            <div key={productrecen.id} className='shadow-md mb-6 p-1 prodseen rounded-md bg-gray-600 hover:shadow-2xl hover:shadow-gray-500'>
               <Link to={`/productDetails/${productrecen.id}/${productrecen.category.name}`}>
                 <div className='parentimg rounded-t-md'>
                   <img src={productrecen.imageCover} className='w-full' alt={productrecen.title} />
