@@ -30,7 +30,7 @@ export default function Navbar() {
                 <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto py-6 md:px-0 px-10">
                     <a className="flex items-center space-x-3 rtl:space-x-reverse">
                         <span className="self-center text-xl font-semibold whitespace-nowrap dark:text-white">
-                            Start Framework
+                            FRESHCART
                         </span>
                     </a>
                     <button
