@@ -58,7 +58,7 @@ function logout(){
                     id="navbar-default"
                 >
                     <div className='flex md:flex-row md:space-x-80 rtl:space-x-reverse'>
-                    <ul className="font-medium flex flex-col p-4 md:p-0 mt-4   rounded-lg  md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-transparent text-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+                    <ul className="font-medium flex flex-col p-4 md:p-0 mt-4   rounded-lg  md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-transparent text-white   ">
                        {userLogin!= null ? <> <li>
                             <NavLink
                                 className=""
