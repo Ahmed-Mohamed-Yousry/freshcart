@@ -56,7 +56,7 @@ export default function Cart() {
           <h2 className='text-center font-bold text-white text-2xl'>Shop Now</h2>
         </div>
 
-        <div className="relative  overflow-x-auto mt-10 mb-20 pb-10 px-4 md:px-10">
+        <div className="relative px-10  mx-auto overflow-x-hidden mt-10 mb-20 pb-10  md:px-10">
           <table className="w-full bg-gray-600 text-sm text-left text-gray-100">
             <thead className="text-xs uppercase bg-gray-800 text-gray-400">
               <tr>
@@ -127,7 +127,7 @@ export default function Cart() {
           </table>
 
           {cartItems?.products?.length > 0 && (
-            <div className="text-center mt-8">
+            <div className="text-center mt-8 ">
               <h3 className="text-xl bg-gray-600 md:text-2xl text-red-500 font-bold mb-6 py-4">
                 Total Price{' '}
                 <span className="text-red-600 font-normal text-lg md:text-xl">
