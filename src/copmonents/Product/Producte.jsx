@@ -80,7 +80,7 @@ export default function Producte() {
   // Function to truncate title to three words
   const truncateTitle = (title) => {
     const words = title.split(' ');
-    return words.length > 3 ? words.slice(0, 3).join(' ') + '...' : title;
+    return words.length > 3 ? words.slice(0, 2).join(' ') + '...' : title;
   };
 
   return (
@@ -157,7 +157,7 @@ export default function Producte() {
               <div className='partentbtn items-center align-middle px-6'>
                 <button 
                   onClick={() => addproductToCart(productrecen.id)} 
-                  className='chiledbtn btn bg-green-500 w-full align-middle'
+                  className='chiledbtn btn  bg-green-500 w-full align-middle'
                 >
                   {loading && productId === productrecen.id ? (
                     <i className="fa-solid fa-spinner px-1 fa-spin"></i>
