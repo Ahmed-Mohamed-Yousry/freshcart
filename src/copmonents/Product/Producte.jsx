@@ -163,7 +163,7 @@ export default function Producte() {
           </button>
         </div>
 
-        <div className='partentbtn items-center align-middle px-6'>
+        <div className='partentbtn items-center align-middle px-4'>
           <button 
             onClick={() => addproductToCart(productrecen.id)} 
             className='chiledbtn btn bg-green-500 w-full align-middle'
