@@ -15,6 +15,7 @@ export default function Producte() {
   const [productId, setProductId] = useState(null);
   const [searchQuery, setSearchQuery] = useState('');
   const [isTwoColumnLayout, setIsTwoColumnLayout] = useState(false); // State for layout
+  const [visibleProducts, setVisibleProducts] = useState(4); // State to control visible products
 
   async function getdata() {
     let { data } = await axios.get("https://ecommerce.routemisr.com/api/v1/products");
@@ -80,7 +81,12 @@ export default function Producte() {
   // Function to truncate title to three words
   const truncateTitle = (title) => {
     const words = title.split(' ');
-    return words.length > 3 ? words.slice(0, 2).join(' ') + '...' : title;
+    return words.length > 3 ? words.slice(0, 3).join(' ') + '...' : title;
+  };
+
+  // Handle the "See More" button click
+  const loadMoreProducts = () => {
+    setVisibleProducts(prev => prev + 4); // Load 4 more products
   };
 
   return (
@@ -123,15 +129,15 @@ export default function Producte() {
 
         {/* Product Grid */}
         <div className={`grid gap-4 ${isTwoColumnLayout ? 'grid-cols-2 px-6 ' : 'grid-cols-1 px-8 '} md:grid-cols-4`}>
-          {filteredProducts.length > 0 ? filteredProducts.map((productrecen) => (
+          {filteredProducts.slice(0, visibleProducts).map((productrecen) => (
             <div key={productrecen.id} className='shadow-md mb-6 p-1 prodseen rounded-md bg-gray-600 hover:shadow-2xl hover:shadow-gray-500'>
               <Link to={`/productDetails/${productrecen.id}/${productrecen.category.name}`}>
                 <div className='parentimg rounded-t-md'>
                   <img src={productrecen.imageCover} className='w-full' alt={productrecen.title} />
                 </div>
                 <div className="p-3">
-                  <p className='catgoryStyle mt-2 text-xl font-semibold'>{productrecen.category.name}</p>
-                  <h2 className='py-3 text-white text-base font-semibold'>
+                  <p className='catgoryStyle mt-2 text-lg font-semibold '>{productrecen.category.name}</p>
+                  <h2 className='py-3 text-white text-base font-semibold sm:text-base sm:font-normal'>
                     {truncateTitle(productrecen.title)} {/* Truncate to 3 words */}
                   </h2>
                   <div className="row justify-between align-middle pb-0">
@@ -142,24 +148,23 @@ export default function Producte() {
                   </div>
                 </div>
               </Link>
-<div className='mb-4  '>
-<button
-                onClick={() => toggleWishlist(productrecen.id)}
-                className="focus:outline-none mb-16 ps-6"
-              >
-                {Array.isArray(wishlistitemId) && wishlistitemId.includes(productrecen.id) ? (
-                  <i className="fa fa-heart text-red-600 text-xl" />
-                ) : (
-                  <i className="fa fa-heart text-gray-400 text-xl" />
-                )}
-              </button>
-</div>
-              
+              <div className='mb-4'>
+                <button
+                  onClick={() => toggleWishlist(productrecen.id)}
+                  className="focus:outline-none mb-16 ps-6"
+                >
+                  {Array.isArray(wishlistitemId) && wishlistitemId.includes(productrecen.id) ? (
+                    <i className="fa fa-heart text-red-600 text-xl" />
+                  ) : (
+                    <i className="fa fa-heart text-gray-400 text-xl" />
+                  )}
+                </button>
+              </div>
 
               <div className='partentbtn items-center align-middle px-6'>
                 <button 
                   onClick={() => addproductToCart(productrecen.id)} 
-                  className='chiledbtn btn  bg-green-500 w-full align-middle'
+                  className='chiledbtn btn bg-green-500 w-full align-middle'
                 >
                   {loading && productId === productrecen.id ? (
                     <i className="fa-solid fa-spinner px-1 fa-spin"></i>
@@ -169,7 +174,22 @@ export default function Producte() {
                 </button>
               </div>
             </div>
-          )) : (
+          ))}
+
+          {/* Show "See More" button if there are more products to load */}
+          {filteredProducts.length > visibleProducts && (
+            <div className='text-center mx-auto'>
+              <button 
+                onClick={loadMoreProducts} 
+                className='text-white p-3 rounded-lg bg-gray-600 border-none cursor-pointer'
+              >
+                See More
+              </button>
+            </div>
+          )}
+
+          {/* Loader */}
+          {filteredProducts.length === 0 && (
             <div className="preLoader text-center">
               <span className="loader"></span>
             </div>
