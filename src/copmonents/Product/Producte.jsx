@@ -11,7 +11,7 @@ export default function Producte() {
   let { addwishlistProduct, removeWishlist } = useContext(WishlistContext);
   const [product, setproduct] = useState([]);
   const [wishlistitemId, setWishlistitemId] = useState([]);
-  const [loading, setLoading] = useState(false);
+  // const [loading, setLoading] = useState(false);
   const [productId, setProductId] = useState(null);
   const [searchQuery, setSearchQuery] = useState('');
   const [isTwoColumnLayout, setIsTwoColumnLayout] = useState(false); // State for layout

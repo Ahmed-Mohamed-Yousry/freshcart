@@ -6,8 +6,11 @@ import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 export default function Wishlist() {
+  
   const { addProduct, setcart } = useContext(CartContext);
   const [loading, setLoading] = useState(false);
+  const [productId, setProductId] = useState(null);
+
   const [wishlistItems, setwishlistItems] = useState([]);
   const { getWishlist, removeWishlist } = useContext(WishlistContext);
 
@@ -15,6 +18,20 @@ export default function Wishlist() {
     let response = await getWishlist();
     setwishlistItems(response?.data.data || []);
   };
+
+  async function addproductToCart(prodId) {
+    setProductId(prodId);
+    setLoading(true);
+    let response = await addProduct(prodId);
+    if (response.data.status === "success") {
+      setLoading(false);
+      setcart(response.data);
+      toast.success(response.data.message);
+    } else {
+      setLoading(false);
+      toast.error(response.data.message);
+    }
+  }
 
   const addproductToCart = async (prodId) => {
     setLoading(true);
