@@ -6,11 +6,9 @@ import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 export default function Wishlist() {
-  
   const { addProduct, setcart } = useContext(CartContext);
   const [loading, setLoading] = useState(false);
   const [productId, setProductId] = useState(null);
-
   const [wishlistItems, setwishlistItems] = useState([]);
   const { getWishlist, removeWishlist } = useContext(WishlistContext);
 
@@ -33,17 +31,17 @@ export default function Wishlist() {
     }
   }
 
-  const addproductToCart = async (prodId) => {
-    setLoading(true);
-    let response = await addProduct(prodId);
-    setLoading(false);
-    if (response.data.status === "success") {
-      setcart(response.data);
-      toast.success(response.data.message);
-    } else {
-      toast.error(response.data.message);
-    }
-  };
+  // const addproductToCart = async (prodId) => {
+  //   setLoading(true);
+  //   let response = await addProduct(prodId);
+  //   setLoading(false);
+  //   if (response.data.status === "success") {
+  //     setcart(response.data);
+  //     toast.success(response.data.message);
+  //   } else {
+  //     toast.error(response.data.message);
+  //   }
+  // };
 
   const removeWishlistProduct = async (prodId) => {
     let response = await removeWishlist(prodId);
@@ -121,7 +119,13 @@ export default function Wishlist() {
                         onClick={() => addproductToCart(product.id)}
                         className="font-medium text-white bg-green-500 rounded-md p-2 md:p-3"
                       >
-                        Add to Cart
+
+            {loading && productId === product.id ? (
+              <i className="fa-solid fa-spinner px-1 fa-spin"></i>
+            ) : (
+              'Add to Cart'
+            )}
+
                       </button>
                     </td>
                   </tr>
